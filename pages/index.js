@@ -1,82 +1,86 @@
 import Head from 'next/head'
 
+import { useState, useEffect } from 'react'
+
+const CERCLE_YT_HASHES = [
+  "oFvqo1dil7M",
+  "_SvwdK_HibQ",
+  "RJaV5BX-xpE",
+  "SD6GDiyHmbE",
+  "uGEDSGCUkXk",
+  "crZfT5qnFdA",
+  "h96MGcsi7GQ",
+  "z05IO3gWlog",
+  "XHNHq1mC0VQ",
+  "dQjkqyc5nlc",
+  "sCNlt5nvSI8",
+  "5mpafLYHVd0",
+  "ZdAwiV4T22I",
+  "8AvC05kXS9I"
+]
+
 export default function Home() {
+
+  const [cercleYTHash, setCercleYTHash] = useState("")
+
+  useEffect(() => {
+    setRandomYTHash()
+  }, [])
+
+  const setRandomYTHash = () => {
+    setCercleYTHash(CERCLE_YT_HASHES[Math.floor(Math.random()*CERCLE_YT_HASHES.length)])
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen max-h-screen py-2 bg-gradient-to-br from-white via-indigo-200 to-pink-100">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>work with cercle</title>
+        <link rel="icon" href="/music-emoji.png" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="mb-4 z-50">
+        <div className="md:hidden">
+          <iframe
+            width="375"
+            height="215"
+            src={`https://www.youtube-nocookie.com/embed/${cercleYTHash}`}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+        <div className="hidden md:block lg:hidden">
+          <iframe
+            width="735"
+            height="380"
+            src={`https://www.youtube-nocookie.com/embed/${cercleYTHash}`}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div className="hidden lg:block">
+          <iframe
+            width="1120"
+            height="630"
+            src={`https://www.youtube-nocookie.com/embed/${cercleYTHash}`}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <button
+        type="button"
+        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gray-900 hover:bg-gray-800 focus:outline-none mb-6 z-50"
+        onClick={() => window.location.reload()}
+      >
+        Change video
+      </button>
+      <p className="text-sm text-black z-50">Made by <a className="underline" target="_blank" href="https://wojtek.wtf">wojtek</a>. right now he's working on <a className="underline" target="_blank" href="https://mazurylabs.com">mazury</a></p>.
     </div>
   )
 }
