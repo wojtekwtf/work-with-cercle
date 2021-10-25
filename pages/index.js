@@ -39,11 +39,11 @@ export default function Home() {
         <link rel="icon" href="/music-emoji.png" />
       </Head>
 
-      <div className="mb-4 z-50">
+      <div className="mb-4 z-50 rounded-md md:rounded-2xl overflow-hidden">
         <div className="md:hidden">
           <iframe
-            width="375"
-            height="215"
+            width="355"
+            height="200"
             src={`https://www.youtube-nocookie.com/embed/${cercleYTHash}`}
             title="YouTube video player"
             frameBorder="0"
