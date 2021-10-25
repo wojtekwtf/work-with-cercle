@@ -3,7 +3,7 @@ import PlausibleProvider from 'next-plausible'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <PlausibleProvider domain="work-with-cercle.vercel.app">
+    <PlausibleProvider domain="workwithcercle.com/">
       <Component {...pageProps} />
     </PlausibleProvider>
   )
