@@ -81,7 +81,7 @@ export default function Home() {
       >
         Change video
       </button>
-      <p className="text-sm text-black z-50">Made by <a className="underline" target="_blank" href="https://wojtek.wtf">wojtek</a>. right now he's working on <a className="underline" target="_blank" href="https://mazurylabs.com">mazury</a></p>.
+      <p className="text-sm text-black z-50">made by <a className="underline" target="_blank" href="https://wojtek.wtf">wojtek</a>. right now he's working on <a className="underline" target="_blank" href="https://mazurylabs.com">mazury</a></p>.
     </div>
   )
 }
