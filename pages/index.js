@@ -35,6 +35,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen max-h-screen py-2 bg-gradient-to-br from-white via-indigo-200 to-pink-100">
       <Head>
         <title>work with cercle</title>
+        <meta name="description" content="random cercle concert without going through youtube"/>
         <link rel="icon" href="/music-emoji.png" />
       </Head>
 
