@@ -45,9 +45,9 @@ export default function Home() {
             height="215"
             src={`https://www.youtube-nocookie.com/embed/${cercleYTHash}`}
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
         <div className="hidden md:block lg:hidden">
@@ -56,9 +56,9 @@ export default function Home() {
             height="380"
             src={`https://www.youtube-nocookie.com/embed/${cercleYTHash}`}
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
         <div className="hidden lg:block">
@@ -67,9 +67,9 @@ export default function Home() {
             height="630"
             src={`https://www.youtube-nocookie.com/embed/${cercleYTHash}`}
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </div>
