@@ -16,7 +16,19 @@ const CERCLE_YT_HASHES = [
   "sCNlt5nvSI8",
   "5mpafLYHVd0",
   "ZdAwiV4T22I",
-  "8AvC05kXS9I"
+  "8AvC05kXS9I",
+  "QHDRRxKlimY",
+  "coloJDqNBRg",
+  "29LwM9Xa6l8",
+  "w1ElkNNsfm8",
+  "2OHFgjuy3DI",
+  "XWfGPGQnYew",
+  "GJkuTx1DQzg",
+  "67Lh8EC0r04",
+  "QRQwZDWz1Pw",
+  "MIM9-wOClmQ",
+  "c_ofe_pV5Yc",
+  "YgBwTcpskgU",
 ]
 
 export default function Home() {
